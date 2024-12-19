@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Expense Tracker</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 font-sans leading-normal tracking-normal">
+    <!-- Header -->
+    <header class="bg-gradient-to-r from-blue-500 to-indigo-600 shadow-lg">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <h1 class="text-white text-2xl font-bold">About</h1>
+            <nav>
+                <ul class="flex space-x-6">
+                    <li><a href="{% url 'home' %}" class="text-white hover:text-gray-200">Home</a></li>
+                    <li><a href="{% url 'add_expense' %}" class="text-white hover:text-gray-200">Expense</a></li>
+                    <li><a href="{% url 'dashboard' %}" class="text-white hover:text-gray-200">Dashboard</a></li>
+                    <li><a href="#" class="text-white hover:text-gray-200">About</a></li>
+                    <li><a href="#" class="text-white hover:text-gray-200">Logout</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-white shadow-md rounded-lg mx-6 md:mx-20 my-8">
+        <div class="flex flex-col md:flex-row items-center justify-between p-6 md:p-12">
+            <div class="text-center md:text-left">
+                <h2 class="text-4xl font-bold text-gray-800">เกี่ยวกับตัวติดตามค่าใช้จ่าย</h2>
+                <p class="mt-4 text-gray-600">
+                    Expense Tracker เป็นแพลตฟอร์มที่ใช้งานง่ายซึ่งออกแบบมาเพื่อช่วยให้คุณจัดการการเงินส่วนบุคคลของคุณได้อย่างง่ายดาย
+                    ติดตามรายได้และค่าใช้จ่ายของคุณ วิเคราะห์รูปแบบการใช้จ่าย และตัดสินใจทางการเงินได้ดีขึ้น
+                </p>
+            </div>
+            <img src="https://th.bing.com/th/id/OIP.pbEXeSpEjRRAc_dtiISjtwHaHa?w=1000&h=1000&rs=1&pid=ImgDetMain" alt="About Illustration" class="mt-6 md:mt-0 max-w-xs">
+        </div>
+    </section>
+
+    <!-- Our Features -->
+    <section class="container mx-auto px-6 my-12">
+        <h3 class="text-3xl font-bold text-center text-gray-800 mb-6">คุณสมบัติของเรา</h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="bg-blue-100 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                <h4 class="text-lg font-semibold text-blue-600">การบันทึกค่าใช้จ่ายง่าย ๆ</h4>
+                <p class="mt-2 text-gray-700">
+                    เพิ่มบันทึกรายได้และค่าใช้จ่ายอย่างรวดเร็วเพื่อติดตามการเงินของคุณ
+                </p>
+            </div>
+            <div class="bg-green-100 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                <h4 class="text-lg font-semibold text-green-600">การวิเคราะห์โดยละเอียด</h4>
+                <p class="mt-2 text-gray-700">
+                    แสดงภาพแนวโน้มการใช้จ่ายของคุณด้วยแผนภูมิและสถิติเชิงโต้ตอบ
+                </p>
+            </div>
+            <div class="bg-yellow-100 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                <h4 class="text-lg font-semibold text-yellow-600">ปลอดภัยและเชื่อถือได้</h4>
+                <p class="mt-2 text-gray-700">
+                    ข้อมูลของคุณได้รับการเข้ารหัสและเก็บไว้อย่างปลอดภัยเพื่อความอุ่นใจ
+                </p>
+            </div>
+        </div>
+    </section>

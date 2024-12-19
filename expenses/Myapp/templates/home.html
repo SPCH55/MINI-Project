@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Personal Expense Tracker</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 font-sans leading-normal tracking-normal">
+    <!-- Header -->
+    <header class="bg-gradient-to-r from-blue-500 to-indigo-600 shadow-lg">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <h1 class="text-white text-3xl font-bold">Expense Tracker</h1>
+                <nav>
+                    <ul class="flex space-x-6">
+                        <li><a href="#" class="text-white hover:text-gray-200">Home</a></li>
+                        <li><a href="{% url 'add_expense' %}" class="text-white hover:text-gray-200">Expense</a></li>
+                        <li><a href="{% url 'dashboard' %}" class="text-white hover:text-gray-200">Dashboard</a></li>
+                        <li><a href="{% url 'about' %}" class="text-white hover:text-gray-200">About</a></li>
+                        <li><a href="#" class="text-white hover:text-gray-200">Logout</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-white shadow-lg rounded-lg mx-6 md:mx-20 my-8">
+        <div class="flex flex-col md:flex-row items-center justify-between p-6 md:p-12">
+            <div class="text-center md:text-left">
+                <h2 class="text-4xl font-bold text-gray-800">จัดการค่าใช้จ่ายของคุณอย่างชาญฉลาด</h2>
+                <p class="mt-4 text-gray-600">ติดตามค่าใช้จ่าย วิเคราะห์พฤติกรรมการใช้จ่าย และวางแผนการเงินอย่างมีประสิทธิภาพได้อย่างง่ายดาย</p>
+            </div>
+            <img src="https://maxipartners.com/wp-content/uploads/2021/07/image-7kWgB2bZjpscDxeQ.jpg" alt="Expense Illustration" class="mt-6 md:mt-0 max-w-xs">
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="container mx-auto px-6 my-12">
+        <h3 class="text-3xl font-bold text-center text-gray-800 mb-6">คุณสมบัติ</h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                <div class="text-blue-500 mb-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                    </svg>
+                </div>
+                <h4 class="text-lg font-semibold text-gray-700 text-center">ติดตามค่าใช้จ่าย</h4>
+                <p class="mt-2 text-gray-600 text-center">บันทึกการใช้จ่ายรายวันของคุณตามหมวดหมู่ได้อย่างง่ายดายและจัดระเบียบการเงินของคุณ</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                <div class="text-blue-500 mb-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 19a2 2 0 100-4 2 2 0 000 4zm-7-2h.01M11 5a2 2 0 100-4 2 2 0 000 4zm7-2h.01M11 19a2 2 0 100-4 2 2 0 000 4zm7-2h.01" />
+                    </svg>
+                </div>
+                <h4 class="text-lg font-semibold text-gray-700 text-center">วิเคราะห์การใช้จ่าย</h4>
+                <p class="mt-2 text-gray-600 text-center">รับข้อมูลเชิงลึกเกี่ยวกับพฤติกรรมการใช้จ่ายของคุณด้วยแผนภูมิและสถิติโดยละเอียด</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                <div class="text-blue-500 mb-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01m-.01 0H9m1 0h3m-2 8h1m6 4H5a2 2 0 01-2-2V5a2 2 0 012-2h14a2 2 0 012 2v14a2 2 0 01-2 2z" />
+                    </svg>
+                </div>
+                <h4 class="text-lg font-semibold text-gray-700 text-center">ตั้งเป้าหมาย</h4>
+                <p class="mt-2 text-gray-600 text-center">วางแผนงบประมาณของคุณและบรรลุเป้าหมายทางการเงินอย่างมีประสิทธิภาพ</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-6">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2024 Expense Tracker. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
